@@ -73,6 +73,6 @@ You can find the PROSE repository which contains examples on using existing PROS
     Sum(v, Div(v, ElementAt(v, 2), Div(v, ElementAt(v, 2), Div(v, ElementAt(v, 2), ElementAt(v, 0)))), ElementAt(v, 2))
     ```
     
-1. Note that the root node for the AST can be any operation (Sum | Mul | Div) not just Sum. And the Maximum reccursive depth is limited to avoid overflow (you can change this in ProseMath.grammar file.
+1. Note that the root node for the AST can be any operation (Sum | Mul | Div) not just Sum. And the Maximum reccursive depth is limited to avoid overflow (you can change this in ProseMath.grammar file).
 
 1. You can play with different input and verify the generated output programs. You can also change the no. of top programs to print (4 here) in the program.cs file.
