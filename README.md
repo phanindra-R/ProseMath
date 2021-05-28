@@ -1,5 +1,5 @@
 # ProseMath
-A .NET project that uses the PROSE SDK to generate mathematical programs using input output examples.
+A .NET project that uses the PROSE SDK to generate programs for mathematical expressions using input output examples.
 
 Microsoft PROSE is a framework of technologies for programming by examples: automatic generation of programs from input-output examples.
 
