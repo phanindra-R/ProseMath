@@ -1,0 +1,14 @@
+using semantics ProseMath.Semantics;
+using learners ProseMath.WitnessFunctions;
+
+language ProseMath;
+
+@complete feature double Score = ProseMath.RankingScore;
+
+@input int[] v;
+
+@start int? program := Sum(v,@recurse[3] Elem,@recurse[3] Elem) | Mul(v,@recurse[3] Elem,@recurse[3] Elem) | Div(v,@recurse[3] Elem,@recurse[3] Elem);
+
+int? Elem := ElementAt(v, pos) | program;
+
+int pos;
