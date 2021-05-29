@@ -53,7 +53,7 @@ You can find the PROSE repository which contains examples on using existing PROS
 1. Enter the input in correct format:
 
     ```
-    "[2,3,4]","6"
+    "[1,2,3,4]","7"
     ```
 1. For the above Example The Top 4 synthesised programs should be: 
 
@@ -61,16 +61,16 @@ You can find the PROSE repository which contains examples on using existing PROS
     Top 4 learned programs:
     ==========================
     Program 1: 
-    Sum(v, ElementAt(v, 0), ElementAt(v, 2))
+    Sum(v, ElementAt(v, 2), ElementAt(v, 3))
     ==========================
     Program 2: 
-    Sum(v, Div(v, ElementAt(v, 2), ElementAt(v, 0)), ElementAt(v, 2))
+    Sum(v, ElementAt(v, 2), Sum(v, ElementAt(v, 0), ElementAt(v, 2)))
     ==========================
     Program 3: 
-    Sum(v, Div(v, ElementAt(v, 2), Div(v, ElementAt(v, 2), ElementAt(v, 0))), ElementAt(v, 2))
+    Sum(v, ElementAt(v, 2), Sum(v, ElementAt(v, 0), Sum(v, ElementAt(v, 0), ElementAt(v, 1))))
     ==========================
     Program 4: 
-    Sum(v, Div(v, ElementAt(v, 2), Div(v, ElementAt(v, 2), Div(v, ElementAt(v, 2), ElementAt(v, 0)))), ElementAt(v, 2))
+    Sum(v, ElementAt(v, 2), Sum(v, ElementAt(v, 0), Sum(v, ElementAt(v, 0), Mul(v, ElementAt(v, 0), ElementAt(v, 1)))))
     ```
     
 1. Note that the root node for the AST can be any operation (Sum | Mul | Div) not just Sum. And the Maximum reccursive depth is limited to avoid overflow (you can change this in ProseMath.grammar file).
